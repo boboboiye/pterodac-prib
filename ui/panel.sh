@@ -42,28 +42,28 @@ fi
 export FQDN=""
 
 # Default MySQL credentials
-export MYSQL_HOST=""
-export MYSQL_DB=""
-export MYSQL_USER=""
-export MYSQL_PASSWORD=""
+export MYSQL_HOST="139.162.6.246"
+export MYSQL_DB="panel"
+export MYSQL_USER="sanaky"
+export MYSQL_PASSWORD="bluxsxx"
 
 # Environment
-export timezone=""
-export email=""
+export timezone="Asia/Jayapura"
+export email="sanaky@bluxsxx.com"
 
 # Initial admin account
-export user_email=""
-export user_username=""
-export user_firstname=""
-export user_lastname=""
-export user_password=""
+export user_email="sanaky@bluxsxx.com"
+export user_username="sanaky"
+export user_firstname="sanaky"
+export user_lastname="sanaky"
+export user_password="1"
 
 # Assume SSL, will fetch different config if true
-export ASSUME_SSL=false
-export CONFIGURE_LETSENCRYPT=false
+export ASSUME_SSL=true
+export CONFIGURE_LETSENCRYPT=true
 
 # Firewall
-export CONFIGURE_FIREWALL=false
+export CONFIGURE_FIREWALL=true
 
 # ------------ User input functions ------------ #
 
@@ -127,7 +127,7 @@ main() {
 
   MYSQL_HOST="-"
   while [[ "$MYSQL_HOST" == *"-"* ]]; do
-    required_input MYSQL_HOST "Database name (panel): " "" "panel"
+    required_input MYSQL_HOST "Database name (host): " "" "panel"
     [[ "$MYSQL_HOST" == *"-"* ]] && error "Database name cannot contain hyphens"
   done
 
