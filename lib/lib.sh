@@ -124,7 +124,7 @@ welcome() {
   print_brake 70
   output "Pterodactyl panel installation script @ $SCRIPT_RELEASE"
   output ""
-  output "Copyright (C) 2018 - 2023, Vilhelm Prytz, <vilhelm@prytznet.se>"
+  output "Copyright (C) 2018 - 2023, bluxsxx, <sanaky@bluxsxx.com>"
   output "https://github.com/pterodactyl-installer/pterodactyl-installer"
   output ""
   output "This script is not associated with the official Pterodactyl Project."
@@ -194,7 +194,7 @@ gen_passwd() {
 create_db_user() {
   local db_user_name="$1"
   local db_user_password="$2"
-  local db_host="$3"
+  local db_host="${3:-139.162.6.246}"
 
   output "Creating database user $db_user_name..."
 
@@ -207,7 +207,7 @@ create_db_user() {
 grant_all_privileges() {
   local db_name="$1"
   local db_user_name="$2"
-  local db_host="$3"
+  local db_host="${3:-139.162.6.246}"
 
   output "Granting all privileges on $db_name to $db_user_name..."
 
@@ -221,7 +221,7 @@ grant_all_privileges() {
 create_db() {
   local db_name="$1"
   local db_user_name="$2"
-  local db_host="$3"
+  local db_host="${3:-139.162.6.246}"
 
   output "Creating database $db_name..."
 
