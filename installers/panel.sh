@@ -39,13 +39,12 @@ fi
 # ------------------ Variables ----------------- #
 
 # Domain name / IP
-FQDN="${FQDN:-localhost}"
+FQDN="${FQDN:-panel.ambatukamm.my.id}"
 
 # Default MySQL credentials
-HOST="${MYSQL_HOST:-139.162.6.246}"
-MYSQL_DB="${MYSQL_DB:-panel}"
-MYSQL_USER="${MYSQL_USER:-pterodactyl}"
-MYSQL_PASSWORD="${MYSQL_PASSWORD:-$(gen_passwd 64)}"
+MYSQL_DB="${MYSQL_DB:-ahh}"
+MYSQL_USER="${MYSQL_USER:-ajj}"
+MYSQL_PASSWORD="${MYSQL_PASSWORD:-1}"
 
 # Environment
 timezone="${timezone:-Asia/Jayapura}"
@@ -120,7 +119,7 @@ configure() {
 
   # Fill in environment:database credentials automatically
   php artisan p:environment:database \
-    --host="$MYSQL_HOST" \
+    --host="127.0.0.1" \
     --port="3306" \
     --database="$MYSQL_DB" \
     --username="$MYSQL_USER" \
@@ -403,3 +402,4 @@ perform_install() {
 # ------------------- Install ------------------ #
 
 perform_install
+
