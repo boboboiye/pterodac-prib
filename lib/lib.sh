@@ -153,10 +153,6 @@ get_latest_versions() {
 }
 
 update_lib_source() {
-  GITHUB_URL="$GITHUB_BASE_URL/$GITHUB_SOURCE"
-  rm -rf /tmp/lib.sh
-  curl -sSL -o /tmp/lib.sh "$GITHUB_URL"/lib/lib.sh
-  # shellcheck source=lib/lib.sh
   source /tmp/lib.sh
 }
 
@@ -198,7 +194,7 @@ gen_passwd() {
 create_db_user() {
   local db_user_name="$1"
   local db_user_password="$2"
-  local db_host="${3:-127.0.0.1}"
+  local db_host="$3"
 
   output "Creating database user $db_user_name..."
 
@@ -211,7 +207,7 @@ create_db_user() {
 grant_all_privileges() {
   local db_name="$1"
   local db_user_name="$2"
-  local db_host="${3:-127.0.0.1}"
+  local db_host="$3"
 
   output "Granting all privileges on $db_name to $db_user_name..."
 
@@ -225,7 +221,7 @@ grant_all_privileges() {
 create_db() {
   local db_name="$1"
   local db_user_name="$2"
-  local db_host="${3:-127.0.0.1}"
+  local db_host="$3"
 
   output "Creating database $db_name..."
 
