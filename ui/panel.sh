@@ -42,6 +42,7 @@ fi
 export FQDN=""
 
 # Default MySQL credentials
+export MYSQL_HOST=""
 export MYSQL_DB=""
 export MYSQL_USER=""
 export MYSQL_PASSWORD=""
