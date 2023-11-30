@@ -125,6 +125,12 @@ main() {
   output "before running this script, the script will do that for you."
   output ""
 
+  MYSQL_HOST="-"
+  while [[ "$MYSQL_HOST" == *"-"* ]]; do
+    required_input MYSQL_HOST "Database name (panel): " "" "panel"
+    [[ "$MYSQL_HOST" == *"-"* ]] && error "Database name cannot contain hyphens"
+  done
+
   MYSQL_DB="-"
   while [[ "$MYSQL_DB" == *"-"* ]]; do
     required_input MYSQL_DB "Database name (panel): " "" "panel"
