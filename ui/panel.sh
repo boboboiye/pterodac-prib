@@ -158,14 +158,14 @@ main() {
     [ -z "$timezone_input" ] && timezone="Europe/Stockholm" # because köttbullar!
   done
 
-  email_input email "Provide the email address that will be used to configure Let's Encrypt and Pterodactyl: " "Email cannot be empty or invalid"
+  email_input email "Provide the email address that will be used to configure Let's Encrypt and Pterodactyl: " 
 
   # Initial admin account
-  email_input user_email "Email address for the initial admin account: " "Email cannot be empty or invalid"
-  required_input user_username "Username for the initial admin account: " "Username cannot be empty"
-  required_input user_firstname "First name for the initial admin account: " "Name cannot be empty"
-  required_input user_lastname "Last name for the initial admin account: " "Name cannot be empty"
-  password_input user_password "Password for the initial admin account: " "Password cannot be empty"
+  email_input user_email "Email address for the initial admin account: " =
+  required_input user_username "Username for the initial admin account: " 
+  required_input user_firstname "First name for the initial admin account: " 
+  required_input user_lastname "Last name for the initial admin account: " 
+  password_input user_password "Password for the initial admin account: " 
 
   print_brake 72
 
