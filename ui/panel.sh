@@ -161,11 +161,11 @@ main() {
   email_input email "Provide the email address that will be used to configure Let's Encrypt and Pterodactyl: " 
 
   # Initial admin account
-  email_input user_email "Email address for the initial admin account: " =
-  required_input user_username "Username for the initial admin account: " 
-  required_input user_firstname "First name for the initial admin account: " 
-  required_input user_lastname "Last name for the initial admin account: " 
-  password_input user_password "Password for the initial admin account: " 
+  user_email "Email address for the initial admin account: " 
+  user_username "Username for the initial admin account: " 
+  user_firstname "First name for the initial admin account: " 
+  user_lastname "Last name for the initial admin account: " 
+  user_password "Password for the initial admin account: " 
 
   print_brake 72
 
