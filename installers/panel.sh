@@ -63,37 +63,7 @@ user_email="${user_email:-admin@bluxsxx.com}"
 user_username="${user_username:-sanaky}"
 user_firstname="${user_firstname:-sanaky}"
 user_lastname="${user_lastname:-sanaky}"
-user_password="${user_password:-sanaky}"
-
-if [[ -z "${email}" ]]; then
-  error "Email is required"
-  exit 1
-fi
-
-if [[ -z "${user_email}" ]]; then
-  error "User email is required"
-  exit 1
-fi
-
-if [[ -z "${user_username}" ]]; then
-  error "User username is required"
-  exit 1
-fi
-
-if [[ -z "${user_firstname}" ]]; then
-  error "User firstname is required"
-  exit 1
-fi
-
-if [[ -z "${user_lastname}" ]]; then
-  error "User lastname is required"
-  exit 1
-fi
-
-if [[ -z "${user_password}" ]]; then
-  error "User password is required"
-  exit 1
-fi
+user_password="${user_password:-1}"
 
 # --------- Main installation functions -------- #
 
