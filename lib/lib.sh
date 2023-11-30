@@ -194,7 +194,7 @@ gen_passwd() {
 create_db_user() {
   local db_user_name="$1"
   local db_user_password="$2"
-  local db_host="${3:-139.162.6.246}"
+  local db_host="${3:-127.0.0.1}"
 
   output "Creating database user $db_user_name..."
 
@@ -207,7 +207,7 @@ create_db_user() {
 grant_all_privileges() {
   local db_name="$1"
   local db_user_name="$2"
-  local db_host="${3:-139.162.6.246}"
+  local db_host="${3:-127.0.0.1}"
 
   output "Granting all privileges on $db_name to $db_user_name..."
 
@@ -221,7 +221,7 @@ grant_all_privileges() {
 create_db() {
   local db_name="$1"
   local db_user_name="$2"
-  local db_host="${3:-139.162.6.246}"
+  local db_host="${3:-127.0.0.1}"
 
   output "Creating database $db_name..."
 
