@@ -42,7 +42,7 @@ fi
 FQDN="${FQDN:-localhost}"
 
 # Default MySQL credentials
-HOST="${MYSQL_HOST:-host}"
+HOST="${MYSQL_HOST:-139.162.6.246}"
 MYSQL_DB="${MYSQL_DB:-panel}"
 MYSQL_USER="${MYSQL_USER:-pterodactyl}"
 MYSQL_PASSWORD="${MYSQL_PASSWORD:-$(gen_passwd 64)}"
