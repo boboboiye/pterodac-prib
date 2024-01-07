@@ -89,7 +89,7 @@ ptdl_dl() {
 install_composer_deps() {
   output "Installing composer dependencies.."
   [ "$OS" == "rocky" ] || [ "$OS" == "almalinux" ] && export PATH=/usr/local/bin:$PATH
-  COMPOSER_ALLOW_SUPERUSER=1 composer install --no-dev --optimize-autoloader
+  COMPOSER_ALLOW_SUPERUSER=1 composer install --no-dev --optimize-autoloader --ignore-platform-req=ext-pdo_mysql --ignore-platform-req=ext-zip --ignore-platform-req=ext-simplexml --ignore-platform-req=ext-bcmath --ignore-platform-req=ext-dom
   success "Installed composer dependencies!"
 }
 
